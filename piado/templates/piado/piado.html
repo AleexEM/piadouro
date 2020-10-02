@@ -1,0 +1,106 @@
+{% load user_in humanize piado %}
+
+<div class="card">
+  <div class="card-content">
+    <div class="row">
+      <div class="col s2">
+        <img src="{{ piado.proprietario.perfil.foto.url }}" alt="" class="circle piado">
+      </div>
+      <div class="col s10">
+        <!-- Repiado por -->
+        {% if piado.repiado_hospedeiro %}
+          <div class="row no-margin-bottom">
+            <div class="col s12">
+              <small>
+                <a href="{% url 'piado-detail' piado.repiado_hospedeiro.id %}">
+                  @{{piado.proprietario}} repiou
+                </a>
+              </small>
+            </div>
+          </div>
+        {% endif %}
+        <!-- Fim do repiado por -->
+        <!-- Proprietário original -->
+        <div class="row no-margin-bottom">
+          {% with piado.piado_original as piado_original %}
+          <div class="col s12">
+            <small>
+              <a href="{% url 'perfil' piado_original.proprietario.username %}">
+                @{{ piado_original.proprietario }} - {{ piado_original.data_criacao|naturaltime }}
+              </a>
+            </small>
+          </div>
+          {% endwith %}
+        </div>
+        <!-- Fim do Proprietário original -->
+        <!-- Comentário -->
+        {% if piado.piado_comentario_hospedeiro %}
+        <div class="row no-margin-bottom">
+          <div class="col s12">
+            <small>
+              Em resposta ao
+              <a href="{% url 'perfil' piado.piado_comentario_hospedeiro.proprietario.username %}">
+                @{{piado.piado_comentario_hospedeiro.proprietario}}
+              </a>
+            </small>
+          </div>
+        </div>
+        {% endif %}
+        <!-- Fim comentário -->
+        <div class="row">
+          <div class="col s12">
+            <a class="black-text piado-conteudo" href="{% url 'piado-detail' piado.id %}">
+              {{ piado.conteudo }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-action">
+    <div class="row">
+      <div class="col s12">
+        <a alt="Comentários" class="modal-trigger" href="#modal{{piado.id}}">
+          <i class="material-icons">comment</i>
+          {{ piado.comentarios.count }}
+        </a>
+        <!-- Modal Structure -->
+        <div id="modal{{piado.id}}" class="modal">
+          <div class="modal-content">
+            <form id="form_comment_{{ piado.id }}" class="piar" action="{% url 'piado-comment' piado.id %}?next_page_on_error={{ request.path }}" method="POST">
+              {% csrf_token %}
+              <div class="row no-margin">
+                <div class="input-field col s12 no-margin">
+                  <textarea id="textarea1" class="materialize-textarea no-margin" name="conteudo"></textarea>
+                  <label for="textarea1">Responde o piu aí</label>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" form="form_comment_{{ piado.id }}" class="modal-close waves-effect waves-green btn-flat">Comentar</button>
+          </div>
+        </div>
+        <a href="{% url 'repiar' piado.id %}?next_page={{ request.path }}" alt="Repiados">
+          <i class="material-icons">transform</i>
+          {{ piado.repiados.count }}
+        </a>
+        <a href="{% url 'piado-like' piado.id %}?next_page={{ request.path }}" alt="Curtidas">
+          <i class="material-icons">
+            {% if request.user|already_like:piado %}
+            favorite
+            {% else %}
+            favorite_border
+            {% endif %}
+          </i>
+          {{ piado.curtidas.count }}
+        </a>
+        {% if piado.proprietario == request.user %}
+          <a href="{% url 'piado-delete' piado.id %}">
+            <i class='material-icons'>delete</i>
+          </a>
+          {% endif %}
+      </div>
+    </div>
+  </div>
+</div>

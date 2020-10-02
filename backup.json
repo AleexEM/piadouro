@@ -1,0 +1,273 @@
+[
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$180000$81b3Dci2VqO3$lpkUr4HHgeRCJpCR0gRPOPfh/CzsdXRhjm+3OuGwkiE=",
+    "last_login": "2020-08-05T00:28:21Z",
+    "is_superuser": true,
+    "username": "alvaro",
+    "first_name": "Alvaro",
+    "last_name": "Leonel",
+    "email": "alvaro@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2020-08-04T22:16:56Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$180000$DVgxUijZIma8$d6IupXlMp95+gdkrRXilH04C7gh06MN2RX2Ny0I59Xc=",
+    "last_login": "2020-08-04T22:36:11Z",
+    "is_superuser": false,
+    "username": "chaves",
+    "first_name": "chaves",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2020-08-04T22:31:22Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$180000$MMn01UKdTcyN$nzUfYGRBWRdVZRNO0MI9Se0crX46mtd6NxZRF5ylzIY=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "kiko",
+    "first_name": "Kiko",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2020-08-04T22:32:13Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$180000$H9xsN7wOFC80$vB4udiDeGl3k81IPXuWCAjEwwOOqZx8xnRoYQtgmPEY=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "chiquinha",
+    "first_name": "Xiquinha",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2020-08-06T21:43:17Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$180000$2nJKpXVy4nuK$YPCgFoLugSfCMX7C7QSe/wSca2dTzdN3aiahGn8yGro=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "jaiminho",
+    "first_name": "Jaiminho",
+    "last_name": "o carteiro",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2020-08-06T21:44:53Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$180000$6OWOWxqKzqXJ$pElxuK7+snSNLtaU2OcpMAxhkKl2f/NeVnRhVCQ5pwc=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "madrugrao",
+    "first_name": "Sr Madruga",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2020-08-06T21:46:27Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$180000$lMZlNcIi7DI0$v3t+sBHfsaVv7rtQpvkP0CUsa69bHQA8BjSuZ8qjqYk=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "popis",
+    "first_name": "Popis",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2020-08-06T21:47:59Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 8,
+  "fields": {
+    "password": "pbkdf2_sha256$180000$Pyk586tWRbL1$MmNL+aRRz9IzDSl5wDhlEvU1JMpqYbMH+nvyzcuTg+E=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "florinda",
+    "first_name": "Florinda",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2020-08-06T21:50:42Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "pessoa.perfil",
+  "pk": 1,
+  "fields": {
+    "usuario": 1,
+    "foto": "piadouro/imagens/eu.jpg",
+    "telefone": "67981551233",
+    "estado_civil": "c",
+    "data_nascimento": "1993-03-15",
+    "estado": "sc",
+    "cidade": "blumenau",
+    "desempregado": false,
+    "seguindo": [
+      2
+    ]
+  }
+},
+{
+  "model": "pessoa.perfil",
+  "pk": 2,
+  "fields": {
+    "usuario": 2,
+    "foto": "piadouro/imagens/chaves.jpeg",
+    "telefone": "6798324543423",
+    "estado_civil": "s",
+    "data_nascimento": "2002-07-16",
+    "estado": "rs",
+    "cidade": "poa",
+    "desempregado": true,
+    "seguindo": [
+      3
+    ]
+  }
+},
+{
+  "model": "pessoa.perfil",
+  "pk": 3,
+  "fields": {
+    "usuario": 3,
+    "foto": "piadouro/imagens/kiko.jpeg",
+    "telefone": "945435343534",
+    "estado_civil": "p",
+    "data_nascimento": "2002-07-10",
+    "estado": "pr",
+    "cidade": "cascavel",
+    "desempregado": false,
+    "seguindo": [
+      1,
+      2
+    ]
+  }
+},
+{
+  "model": "pessoa.perfil",
+  "pk": 4,
+  "fields": {
+    "usuario": 4,
+    "foto": "piadouro/imagens/chiquinha.jpeg",
+    "telefone": "6798122344",
+    "estado_civil": "s",
+    "data_nascimento": "2002-07-17",
+    "estado": "rs",
+    "cidade": "porto alegre",
+    "desempregado": false,
+    "seguindo": []
+  }
+},
+{
+  "model": "pessoa.perfil",
+  "pk": 5,
+  "fields": {
+    "usuario": 5,
+    "foto": "piadouro/imagens/jaiminho.jpeg",
+    "telefone": "1298234566",
+    "estado_civil": "v",
+    "data_nascimento": "1980-07-16",
+    "estado": "pr",
+    "cidade": "pato branco",
+    "desempregado": false,
+    "seguindo": []
+  }
+},
+{
+  "model": "pessoa.perfil",
+  "pk": 6,
+  "fields": {
+    "usuario": 6,
+    "foto": "piadouro/imagens/madrugao.jpeg",
+    "telefone": "12323453564",
+    "estado_civil": "p",
+    "data_nascimento": "1980-01-01",
+    "estado": "sc",
+    "cidade": "floripa",
+    "desempregado": false,
+    "seguindo": []
+  }
+},
+{
+  "model": "pessoa.perfil",
+  "pk": 7,
+  "fields": {
+    "usuario": 7,
+    "foto": "piadouro/imagens/popis.jpeg",
+    "telefone": "4356457567434",
+    "estado_civil": "s",
+    "data_nascimento": "2002-07-10",
+    "estado": "pr",
+    "cidade": "california",
+    "desempregado": false,
+    "seguindo": []
+  }
+},
+{
+  "model": "pessoa.perfil",
+  "pk": 8,
+  "fields": {
+    "usuario": 8,
+    "foto": "piadouro/imagens/florinda.jpeg",
+    "telefone": "34567564324",
+    "estado_civil": "v",
+    "data_nascimento": "1980-01-01",
+    "estado": "rs",
+    "cidade": "alegrete",
+    "desempregado": false,
+    "seguindo": []
+  }
+}
+]

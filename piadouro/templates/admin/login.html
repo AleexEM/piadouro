@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block seguidores %}{% endblock seguidores %}
+
+{% block principal %}
+  <div class="col s12 m6 offset-m3">
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">LOGIN</span>
+        <div class="row">
+          <form class="col s12" action="{{ app_path }}" method="post" id="login-form">
+            {% csrf_token %}
+            {{ form.username.errors }}
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="icon_username" type="text" class="validate" name="username">
+                <label for="icon_username">Usúario</label>
+              </div>
+              <div class="input-field col s12">
+                <i class="material-icons prefix">lock</i>
+                <input id="icon_password" type="password" class="validate" name="password">
+                <label for="icon_password">Senha</label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="card-action right-align">
+        <a href="{% url 'password_reset' %}" class="waves-effect waves-teal btn-flat">Esqueci minha senha</a>
+        <button form="login-form" class="waves-effect waves-teal btn-flat" type="submit">Entrar</button>
+      </div>
+    </div>
+  </div>
+{% endblock principal %}

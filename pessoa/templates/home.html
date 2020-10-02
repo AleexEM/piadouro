@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load user_in %}
+
+{% block principal %}
+{{form.errors}}
+  <div class="col s12 m6 offset-m3 offset-l1">
+    {% if request.path == '/' %}
+    <div class="row">
+      <form class="col s12 piar" method="POST" action="{% url 'piado-create' %}">
+        {% csrf_token %}
+        <div class="row">
+          <div class="input-field col s10">
+            <textarea id="piado_principal" class="materialize-textarea" name="conteudo"></textarea>
+            <label for="piado_principal">Da um piu ai</label>
+          </div>
+        </div>
+      </form>
+    </div>
+    {% endif %}
+    <div class="row">
+      {% for piado in piados %}
+        <div class="col s12">
+          {% include 'piado/piado.html' %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock principal %}
